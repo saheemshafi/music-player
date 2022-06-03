@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* font-family: 'IBM Plex Sans', sans-serif; */
+:root {
+
+    /* backgrounds */
+
+    --primary-bg: #242221;
+    --secondary-bg: #323030;
+
+    --gradient-mix-yellow: #f8c861;
+    --gradient-mix-orange: #fe7d48;
+
+
+    --gradient-mix-pink: #f28ff3;
+    --gradient-mix-red: #f55b77;
+
+
+    --gradient-mix-sky: #51d6f9;
+    --gradient-mix-red: #3ebbfe;
+
+    /* colors */
+
+    --primary-color: #fb6639;
+    --secondary-color: #4f4d4e;
+    --white-color: #fff;
+    --black-color: #000;
+
+    /* weights */
+
+    --regular-weight: 400;
+    --medium-weight: 500;
+    --semibold-weight: 600;
+    --bold-weight: 700;
+
+
+    --primary-font: 'IBM Plex Sans', sans-serif;
+    --secondary-font: 'Poppins', sans-serif;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--white-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0 1rem;
+    align-items: center;
+}
+
+header i {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+header .arrow-bottom {
+    color: var(--primary-color);
+}
+
+header .dots {
+    color: var(--secondary-color);
+}
+
+header .dots:hover{
+    transition: .2s linear;
+    color: var(--primary-color);
+}
+
+.poster-wrapper {
+
+    width: 80%;
+    margin: 2.5rem auto 1rem auto;
+    display: grid;
+    place-items: center;
+
+}
+
+.poster-wrapper img {
+    border-radius: .5rem;
+    width: 269px;
+}
+
+
+.song {
+    display: flex;
+    width: 80%;
+    margin: 1rem auto .8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song i {
+    align-self: flex-end;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+
+}
+
+.song .song-info h3 {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    letter-spacing: .4px;
+    font-weight: var(--medium-weight-weight);
+}
+
+.song .song-info p {
+    font-family: var(--secondary-font);
+    font-size: .8rem;
+    color: var(--secondary-color);
+    font-weight: var(--medium-weight);
+    margin-top: .25rem;
+}
+
+.song-progress-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.song-progress-wrapper .range input {
+    width: 100%;
+    height: 5px;
+    position: relative;
+}
+
+/* .song-progress-wrapper .range input::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 69%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+}
+
+.song-progress-wrapper .range input::after {
+
+    content: "";
+    position: absolute;
+    width: 69%;
+    height: 5px;
+    left: 0;
+    background: var(--primary-color);
+
+} */
+
+.song-progress-wrapper .time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    font-size: .75rem;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    letter-spacing: .5px;
+
+}
+
+.btn-wrapper {
+    width: 80%;
+    margin: 2.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-wrapper .main-btns {
+    font-size: 2.25rem;
+    cursor: pointer;
+}
+
+.btn-wrapper .secondary-btns {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.btn-wrapper .secondary-btns:hover{
+    color: var(--primary-color);
+    transition: .2s linear;
+}
+.bottom {
+    width: 80%;
+    margin: 1rem auto 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+}
+
+.bottom .bottom-icons {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.bottom .bottom-icons:hover{
+    color: var(--primary-color);
+    transition: .2s linear;
+}
+

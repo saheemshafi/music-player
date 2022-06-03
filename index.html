@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Moody - Listen to your favourite songs </title>
+
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-icon arrow-bottom"><i class='bx bx-chevron-down'></i></div>
+        <div>
+            <p>Now Playing</p>
+        </div>
+        <div class="header-icon dots">
+            <i class='bx bx-dots-horizontal-rounded'></i>
+        </div>
+    </header>
+
+    <div class="poster-wrapper">
+        <img id="poster" src="images/poster template.webp" alt="poster">
+    </div>
+
+    <div class="song">
+        <div class="song-info">
+            <h3 id="song-name">To die for</h3>
+            <p id="artist-name">Sam Smith</p>
+        </div>
+        <div class="song-cta">
+            <i id="favourites" class='bx bx-heart'></i>
+        </div>
+    </div>
+
+    <div class="song-progress-wrapper">
+        <div class="range">
+            <input id="progress" type="range" min="0" max="100">
+        </div>
+        <div class="time">
+            <div id="current-time">00:00</div>
+            <div id="duration">00:00</div>
+        </div>
+    </div>
+
+    <div class="btn-wrapper">
+        <div class="secondary-btns"><i class='bx bx-shuffle'></i></div>
+        <div class="main-btns"><i id="prev-btn" class='bx bx-skip-previous'></i></div>
+        <div class="main-btns"><i id="play-pause-btn" class='bx bx-play'></i></div>
+        <div class="main-btns"><i id="next-btn" class='bx bx-skip-next'></i></div>
+        <div class="secondary-btns"><i class='bx bx-repost'></i></div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-icons"><i class='bx bx-globe'></i></div>
+        <div class="bottom-icons home"><i class='bx bx-home-alt-2'></i></div>
+        <div class="bottom-icons"><i class='bx bxs-playlist'></i></div>
+    </div>
+
+
+    <!-- own js -->
+    <script src="js/songs.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
