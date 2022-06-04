@@ -8,6 +8,8 @@ let posterImg = document.getElementById('poster');
 let currentTimeField = document.getElementById('current-time');
 let durationField = document.getElementById('duration');
 let progressBar = document.getElementById('progress');
+let rangeStyle = document.querySelector('.range-style-bg .range-style');
+let rangeDot = document.querySelector('.dot');
 let index = 0;
 let audio = new Audio();
 
@@ -87,6 +89,8 @@ const loadTimes = function () {
     audio.addEventListener('timeupdate', () => {
 
         progressBar.value = Math.floor(audio.currentTime / audio.duration * 100);
+        rangeStyle.style.width = `${progressBar.value}%`;
+        rangeDot.style.left = `${progressBar.value}%`;
 
         let currentTimeSeconds = Math.floor(audio.currentTime % 60);
         let currentTimeMinutes = Math.floor(audio.currentTime / 60);
