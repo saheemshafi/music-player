@@ -94,5 +94,35 @@ let songs = [
         artist: "Emma Heesters",
         songSource: "Tu Aake Dekhle - Emma Heesters",
         songPoster: "tu aake dekhle"
+    },
+    {
+        songName: "Alan Walker",
+        artist: "The Spectre",
+        songSource: "Alan Walker - The Spectre",
+        songPoster: "spectre"
+    },
+    {
+        songName: "Heading Home",
+        artist: "Alan Walker & Ruben",
+        songSource: "Alan Walker & Ruben – Heading Home",
+        songPoster: "heading home"
+    },
+    {
+        songName: "Fake A Smile",
+        artist: "Alan Walker x salem ilese",
+        songSource: "Alan Walker x salem ilese - Fake A Smile",
+        songPoster: "fake a smile"
+    },
+    {
+        songName: "Man On The Moon",
+        artist: "Alan Walker x Benjamin Ingrosso",
+        songSource: "Alan Walker x Benjamin Ingrosso - Man On The Moon",
+        songPoster: "man on the moon"
+    },
+    {
+        songName: "Wherever You Go",
+        artist: "Alok feat. John Martin",
+        songSource: "Alok feat. John Martin - Wherever You Go",
+        songPoster: "wherever you go"
     }
 ];
