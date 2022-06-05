@@ -8,9 +8,16 @@ let posterImg = document.getElementById('poster');
 let functionBtn = document.getElementById('function-btn');
 let currentTimeField = document.getElementById('current-time');
 let durationField = document.getElementById('duration');
+// song progress bar elements
 let progressBar = document.getElementById('progress');
-let rangeStyle = document.querySelector('.range-style-bg .range-style');
+let rangeStyle = document.querySelector('.range-style');
 let rangeDot = document.querySelector('.dot');
+// volume bar elements
+let volumeBar = document.getElementById('volume-range');
+let volumeStyle = document.querySelector('.volume-style');
+let volumeDot = document.querySelector('.volume-dot');
+
+
 let index = 0;
 let audio = new Audio();
 
@@ -162,8 +169,6 @@ audio.addEventListener('ended', () => {
 
     }
 
-    // shuffle condition
-
 
 });
 
@@ -190,6 +195,17 @@ functionBtn.addEventListener('click', () => {
     }
 
 
+
+})
+
+// function to increase or decrease volume 
+volumeBar.addEventListener('change', () => {
+
+    audio.volume = volumeBar.value / 100;
+
+    volumeStyle.style.width = `${volumeBar.value}%`;
+
+    volumeDot.style.left = `${volumeBar.value}%`;
 
 })
 
