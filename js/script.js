@@ -5,6 +5,7 @@ let nextBtn = document.getElementById('next-btn');
 let songName = document.getElementById('song-name');
 let artistName = document.getElementById('artist-name');
 let posterImg = document.getElementById('poster');
+let functionBtn = document.getElementById('function-btn');
 let currentTimeField = document.getElementById('current-time');
 let durationField = document.getElementById('duration');
 let progressBar = document.getElementById('progress');
@@ -125,10 +126,24 @@ const loadTimes = function () {
 // function to run when song ends
 audio.addEventListener('ended', () => {
 
-    // repeat song condition
+    // repeat and shuffle song condition
+    if (functionBtn.className == "bx bx-repeat repeat active") {
+
+        audio.currentTime = 0;
+        audio.play();
+
+    }
+
+    else if (functionBtn.className == "bx bx-shuffle active") {
+
+        index = Math.floor(Math.random() * songs.length);
+        loadSong(index);
+        audio.play();
+
+    }
 
     // song ended conditions
-    if (index + 1 < songs.length) {
+    else if (index + 1 < songs.length) {
 
         index++;
         loadSong(index);
@@ -148,7 +163,7 @@ audio.addEventListener('ended', () => {
     }
 
     // shuffle condition
-  
+
 
 });
 
@@ -159,10 +174,24 @@ progressBar.addEventListener('change', () => {
 
 })
 
-// function of repeat btn
+// function of repeat and shuffle
+functionBtn.addEventListener('click', () => {
+
+    if (functionBtn.className == "bx bx-repeat") {
+        functionBtn.className = "bx bx-repeat repeat active";
+    }
+
+    else if (functionBtn.className == "bx bx-repeat repeat active") {
+        functionBtn.className = "bx bx-shuffle active";
+    }
+
+    else {
+        functionBtn.className = "bx bx-repeat";
+    }
 
 
-// function of shuffle btn
+
+})
 
 
 
