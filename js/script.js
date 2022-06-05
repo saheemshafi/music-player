@@ -13,7 +13,7 @@ let rangeDot = document.querySelector('.dot');
 let index = 0;
 let audio = new Audio();
 
-
+// loading song in DOM
 const loadSong = function (index) {
 
     posterImg.src = `images/posters/${songs[index].songPoster}.webp`;
@@ -23,6 +23,7 @@ const loadSong = function (index) {
 
 };
 
+// function of play and pause btn
 const masterPlay = function () {
 
     loadSong(index);
@@ -51,6 +52,7 @@ const masterPlay = function () {
 
 }();
 
+// function of next and previous btn
 nextBtn.addEventListener('click', () => {
 
     if (index + 1 < songs.length)
@@ -82,6 +84,7 @@ prevBtn.addEventListener('click', () => {
 
 });
 
+// function for time handling and updation in DOM
 const loadTimes = function () {
 
 
@@ -119,27 +122,49 @@ const loadTimes = function () {
 
 }();
 
-
+// function to run when song ends
 audio.addEventListener('ended', () => {
 
-    if (index + 1 < songs.length)
+    // repeat song condition
+
+    // song ended conditions
+    if (index + 1 < songs.length) {
+
         index++;
-    else
+        loadSong(index);
+        audio.play();
+        playPauseBtn.classList.remove('bx-play');
+        playPauseBtn.classList.add('bx-pause');
+
+    }
+    else {
+
         index = 0;
+        loadSong(index);
+        audio.play();
+        playPauseBtn.classList.remove('bx-play');
+        playPauseBtn.classList.add('bx-pause');
 
+    }
 
-    loadSong(index);
-    audio.play();
-    playPauseBtn.classList.remove('bx-play');
-    playPauseBtn.classList.add('bx-pause');
+    // shuffle condition
+  
 
 });
 
+// function to seek 
 progressBar.addEventListener('change', () => {
 
     audio.currentTime = progressBar.value * audio.duration / 100;
 
 })
+
+// function of repeat btn
+
+
+// function of shuffle btn
+
+
 
 
 
