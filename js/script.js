@@ -70,9 +70,8 @@ nextBtn.addEventListener('click', () => {
 
 
     loadSong(index);
-    audio.play();
-    playPauseBtn.classList.remove('bx-play');
-    playPauseBtn.classList.add('bx-pause');
+    playPauseBtn.classList.add('bx-play');
+    playPauseBtn.classList.remove('bx-pause');
 
 
 });
@@ -85,9 +84,8 @@ prevBtn.addEventListener('click', () => {
         index--;
 
     loadSong(index);
-    audio.play();
-    playPauseBtn.classList.remove('bx-play');
-    playPauseBtn.classList.add('bx-pause');
+    playPauseBtn.classList.add('bx-play');
+    playPauseBtn.classList.remove('bx-pause');
 
 
 });
