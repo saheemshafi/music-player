@@ -149,7 +149,7 @@ header .dots:hover {
     width: 100%;
     height: 8px;
     position: absolute;
-    z-index: 9999;
+    z-index: 20;
     opacity: 0;
     top: -2px;
     cursor: pointer;
@@ -234,6 +234,12 @@ header .dots:hover {
     transition: .2s linear;
 }
 
+.bxs-playlist:hover{
+
+    color: var(--secondary-color);
+
+}
+
 .bottom {
     width: 80%;
     margin: 1rem auto 0.5rem;
@@ -244,14 +250,14 @@ header .dots:hover {
     font-size: 1.25rem;
 }
 
-.bottom .secondary-btns i:hover{
+.bottom .secondary-btns i:hover {
 
     color: var(--primary-color);
     transition: .4s linear;
 
 }
 
-.bottom .secondary-btns i:not(i[class="bx-volume-full"]){
+.bottom .secondary-btns i:not(i[class="bx-volume-full"]) {
 
     cursor: pointer;
 
@@ -264,7 +270,7 @@ header .dots:hover {
 
 }
 
-.bx-volume-full{
+.bx-volume-full {
 
     position: relative;
     display: flex;
@@ -272,14 +278,14 @@ header .dots:hover {
 
 }
 
-.volume-modal{
+.volume-modal {
     position: relative;
     margin: 0 0 0 .5rem;
     height: 5px;
     width: 150px;
 }
 
-.volume-modal input{
+.volume-modal input {
     left: -1px;
     width: 100%;
     height: 8px;
@@ -290,7 +296,7 @@ header .dots:hover {
     cursor: pointer;
 }
 
-.volume-modal .volume-style-bg{
+.volume-modal .volume-style-bg {
 
     width: 100%;
     position: absolute;
@@ -299,7 +305,7 @@ header .dots:hover {
 
 }
 
-.volume-modal .volume-style{
+.volume-modal .volume-style {
 
     position: absolute;
     width: 50%;
@@ -311,7 +317,7 @@ header .dots:hover {
 
 }
 
-.volume-modal .volume-dot{
+.volume-modal .volume-dot {
 
     position: absolute;
     left: 50%;
@@ -321,7 +327,7 @@ header .dots:hover {
 
 }
 
-.volume-modal .volume-dot::after{
+.volume-modal .volume-dot::after {
 
     content: "";
     width: 7px;
@@ -336,3 +342,57 @@ header .dots:hover {
     box-shadow: 0 0 0px 4px #ffffff;
 
 }
+
+.bxs-playlist .offcanvas-playlists {
+
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: var(--black-color);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: right .4s ease;
+    cursor: default;
+    z-index: 21;
+
+}
+
+::-webkit-scrollbar{
+
+    width: 5px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background-color: var(--secondary-color);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background-color: var(--primary-color);
+
+}
+
+.offcanvas-playlists .playlist-item{
+
+    /* background:rgb(14, 13, 13); */
+    padding: .25rem 0;
+    margin: .5rem .5rem;
+    border-radius: .25rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: var(--white-color);
+    border-bottom: 1px solid var(--secondary-color);
+
+}
+
+.offcanvas-playlists .playlist-item:hover{
+
+    background-color: rgb(14, 13, 13);
+    transition: .3s linear;
+
+}
+

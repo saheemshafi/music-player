@@ -241,6 +241,51 @@ volumeBar.addEventListener('change', () => {
 
 });
 
+// js for playlist
+let playlist = document.getElementById('playlist');
+let playlistBtn = document.getElementById('playlist-btn');
+
+playlistBtn.onmouseenter = () => {
+
+    playlist.style.right = "0";
+
+};
+
+songs.forEach((element, index) => {
+
+    playlist.innerHTML += `
+                         <div class="playlist-item">
+                            <div class="song">
+                                <div class="song-info">
+                                    <h3 id="song-name">${songs[index].songName}</h3>
+                                    <p id="artist-name">${songs[index].artist}</p>
+                                </div>
+                                 <div class="song-cta">
+                                    <i id="favourites" class='bx bx-play'></i>
+                                 </div>
+                             </div>
+                         </div>
+                         `;
+
+});
+
+let playlistItems = document.querySelectorAll('.playlist-item');
+Array.from(playlistItems).forEach((element, i) => {
+
+
+    element.addEventListener('click', () => {
+
+        index = i;
+        loadSong(index)
+        audio.play();
+        playPauseBtn.classList.remove('bx-play');
+        playPauseBtn.classList.add('bx-pause');
+        playlist.style.right = "-300px";
+
+    })
+
+})
+
 
 
 
