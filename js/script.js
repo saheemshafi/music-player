@@ -70,8 +70,16 @@ nextBtn.addEventListener('click', () => {
 
 
     loadSong(index);
-    playPauseBtn.classList.add('bx-play');
-    playPauseBtn.classList.remove('bx-pause');
+    if (playPauseBtn.classList.contains('bx-pause')) {
+
+        audio.play();
+    }
+    else {
+
+        playPauseBtn.classList.add('bx-play');
+        playPauseBtn.classList.remove('bx-pause');
+
+    }
 
 
 });
@@ -84,8 +92,16 @@ prevBtn.addEventListener('click', () => {
         index--;
 
     loadSong(index);
-    playPauseBtn.classList.add('bx-play');
-    playPauseBtn.classList.remove('bx-pause');
+    if (playPauseBtn.classList.contains('bx-pause')) {
+
+        audio.play();
+    }
+    else {
+
+        playPauseBtn.classList.add('bx-play');
+        playPauseBtn.classList.remove('bx-pause');
+
+    }
 
 
 });
@@ -121,6 +137,8 @@ const loadTimes = function () {
 
         else
             durationField.innerHTML = `0${durationMinutes}:${durationSeconds}`;
+ 
+        
 
 
     });

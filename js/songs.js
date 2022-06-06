@@ -96,8 +96,8 @@ let songs = [
         songPoster: "tu aake dekhle"
     },
     {
-        songName: "Alan Walker",
-        artist: "The Spectre",
+        songName: "The Spectre",
+        artist: "Alan Walker",
         songSource: "Alan Walker - The Spectre",
         songPoster: "spectre"
     },
