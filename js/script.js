@@ -117,28 +117,44 @@ const loadTimes = function () {
         rangeStyle.style.width = `${progressBar.value}%`;
         rangeDot.style.left = `${progressBar.value}%`;
 
+        // js for current time starts here
+
         let currentTimeSeconds = Math.floor(audio.currentTime % 60);
         let currentTimeMinutes = Math.floor(audio.currentTime / 60);
 
         if (currentTimeSeconds < 10)
-            currentTimeField.innerHTML = `0${currentTimeMinutes}:0${currentTimeSeconds}`;
+            currentTimeSeconds = `0${Math.floor(audio.currentTime % 60)}`;
 
         else
-            currentTimeField.innerHTML = `0${currentTimeMinutes}:${currentTimeSeconds}`;
+            currentTimeSeconds = `${Math.floor(audio.currentTime % 60)}`;
+
+        if (currentTimeMinutes < 10)
+            currentTimeMinutes = `0${Math.floor(audio.currentTime / 60)}`;
+        else
+            currentTimeMinutes = `${Math.floor(audio.currentTime / 60)}`;
+
+        currentTimeField.innerHTML = `${currentTimeMinutes}:${currentTimeSeconds}`;
+
+        // js for duration starts here
 
         let durationSeconds = Math.floor(audio.duration % 60);
         let durationMinutes = Math.floor(audio.duration / 60);
 
-        if (isNaN(durationSeconds) || isNaN(durationMinutes))
-            durationField.innerHTML = `00:00`;
-
-        else if (durationSeconds < 10)
-            durationField.innerHTML = `0${durationMinutes}:0${durationSeconds}`;
+        if (durationSeconds < 10)
+            durationSeconds = `0${Math.floor(audio.duration % 60)}`
 
         else
-            durationField.innerHTML = `0${durationMinutes}:${durationSeconds}`;
- 
-        
+            durationSeconds = `${Math.floor(audio.duration % 60)}`
+        if (durationMinutes < 10)
+            durationMinutes = `0${Math.floor(audio.duration / 60)}`;
+        else
+            durationMinutes = `${Math.floor(audio.duration / 60)}`;
+
+
+        durationField.innerHTML = `${durationMinutes}:${durationSeconds}`;
+
+        if (isNaN(durationSeconds) || isNaN(durationMinutes))
+            durationField.innerHTML = `00:00`;
 
 
     });
@@ -193,7 +209,7 @@ progressBar.addEventListener('change', () => {
 
     audio.currentTime = progressBar.value * audio.duration / 100;
 
-})
+});
 
 // function of repeat and shuffle
 functionBtn.addEventListener('click', () => {
@@ -212,7 +228,7 @@ functionBtn.addEventListener('click', () => {
 
 
 
-})
+});
 
 // function to increase or decrease volume 
 volumeBar.addEventListener('change', () => {
@@ -223,7 +239,7 @@ volumeBar.addEventListener('change', () => {
 
     volumeDot.style.left = `${volumeBar.value}%`;
 
-})
+});
 
 
 
