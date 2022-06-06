@@ -211,7 +211,8 @@ header .dots:hover {
 }
 
 .btn-wrapper {
-    width: 40%;
+    width: 80%;
+    max-width: 600px;
     margin: 2.5rem auto 0;
     display: flex;
     justify-content: space-between;
