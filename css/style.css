@@ -65,7 +65,7 @@ body {
 header {
     display: flex;
     justify-content: space-around;
-    margin: 2rem 0 1rem;
+    margin: 1rem 0;
     align-items: center;
 }
 
@@ -90,7 +90,7 @@ header .dots:hover {
 .poster-wrapper {
 
     width: 80%;
-    margin: 2.5rem auto 1rem auto;
+    margin: 2.5rem auto 0 auto;
     display: grid;
     place-items: center;
 
@@ -343,20 +343,49 @@ header .dots:hover {
 
 }
 
-.bxs-playlist .offcanvas-playlists {
+.offcanvas-playlists {
 
-    width: 300px;
+    max-width: 300px;
+    min-width: 280px;
     height: 100vh;
     overflow-y: auto;
     background-color: var(--black-color);
     position: fixed;
     top: 0;
-    right: -300px;
-    transition: right .4s ease;
+    transform: translateX(300px);
+    right: 0;
+    transition: all .4s ease;
     cursor: default;
     z-index: 21;
 
 }
+
+.active{
+
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+
+}
+
+.active i{
+
+    color: var(--white-color) !important; 
+
+}
+
+.active .song-info p{
+
+    color: var(--gradient-mix-yellow) !important;
+
+}
+
+.offcanvas-playlists.open{
+
+    transform: translateX(0);
+
+}
+
+
 
 ::-webkit-scrollbar{
 
@@ -381,11 +410,26 @@ header .dots:hover {
     /* background:rgb(14, 13, 13); */
     padding: .25rem 0;
     margin: .5rem .5rem;
-    border-radius: .25rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: .25rem;;
     color: var(--white-color);
-    border-bottom: 1px solid var(--secondary-color);
+
+}
+
+.offcanvas-playlists .playlist-item .song-info h3{
+
+
+    font-size: .8rem !important;
+
+}
+
+.offcanvas-playlists .playlist-item .song-info p{
+
+    font-size: .75rem;
+    color: grey;
+    width: 170px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 }
 

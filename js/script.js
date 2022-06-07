@@ -245,10 +245,9 @@ volumeBar.addEventListener('change', () => {
 let playlist = document.getElementById('playlist');
 let playlistBtn = document.getElementById('playlist-btn');
 
-playlistBtn.onmouseenter = () => {
+playlistBtn.onclick = () => {
 
-    playlist.style.right = "0";
-
+    playlist.classList.add('open');
 };
 
 songs.forEach((element, index) => {
@@ -280,7 +279,8 @@ Array.from(playlistItems).forEach((element, i) => {
         audio.play();
         playPauseBtn.classList.remove('bx-play');
         playPauseBtn.classList.add('bx-pause');
-        playlist.style.right = "-300px";
+        playlist.classList.remove('open');
+        element.classList.add('active');
 
     })
 
