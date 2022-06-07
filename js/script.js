@@ -18,6 +18,8 @@ let volumeStyle = document.querySelector('.volume-style');
 let volumeDot = document.querySelector('.volume-dot');
 
 
+
+
 let index = 0;
 let audio = new Audio();
 
@@ -56,6 +58,7 @@ const masterPlay = function () {
         }
 
     });
+    
 
 
 }();
@@ -244,20 +247,29 @@ volumeBar.addEventListener('change', () => {
 // js for playlist
 let playlist = document.getElementById('playlist');
 let playlistBtn = document.getElementById('playlist-btn');
+let playlistClose = document.getElementById('close-icon');
 
 playlistBtn.onclick = () => {
 
     playlist.classList.add('open');
+    playlistClose.classList.add('open');
 };
 
-songs.forEach((element, index) => {
+playlistClose.onclick = ()=>{
+
+    playlist.classList.remove('open');
+    playlistClose.classList.remove('open');
+
+
+}
+songs.forEach((element,index) => {
 
     playlist.innerHTML += `
                          <div class="playlist-item">
                             <div class="song">
                                 <div class="song-info">
                                     <h3 id="song-name">${songs[index].songName}</h3>
-                                    <p id="artist-name">${songs[index].artist}</p>
+                                    <p title="${songs[index].artist}" id="artist-name">${songs[index].artist}</p>
                                 </div>
                                  <div class="song-cta">
                                     <i id="favourites" class='bx bx-play'></i>
@@ -279,12 +291,13 @@ Array.from(playlistItems).forEach((element, i) => {
         audio.play();
         playPauseBtn.classList.remove('bx-play');
         playPauseBtn.classList.add('bx-pause');
-        playlist.classList.remove('open');
         element.classList.add('active');
 
     })
 
-})
+});
+
+
 
 
 

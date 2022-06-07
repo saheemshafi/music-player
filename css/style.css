@@ -226,12 +226,13 @@ header .dots:hover {
 
 .btn-wrapper .secondary-btns {
     color: var(--secondary-color);
-    cursor: pointer;
+    
 }
 
-.btn-wrapper .secondary-btns:hover {
+.btn-wrapper .secondary-btns i:hover {
     color: var(--primary-color);
     transition: .2s linear;
+    cursor: pointer;
 }
 
 .bxs-playlist:hover{
@@ -290,7 +291,7 @@ header .dots:hover {
     width: 100%;
     height: 8px;
     position: absolute;
-    z-index: 9999;
+    z-index: 20;
     opacity: 0;
     top: -2px;
     cursor: pointer;
@@ -384,6 +385,33 @@ header .dots:hover {
     transform: translateX(0);
 
 }
+
+.close-icon{
+
+    position: fixed;
+    bottom: 8rem;
+    right: 268px;
+    transform: translateX(292px);
+    font-size: 1.425rem;
+    z-index: 22;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.close-icon.open{
+
+transform: translateX(0);
+
+}
+
+.close-icon i{
+
+
+    background: #fb6639;
+    border-radius: 50%;
+}
+
+
 
 
 
