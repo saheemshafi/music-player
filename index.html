@@ -79,7 +79,7 @@
 
     <div class="offcanvas-playlists" id="playlist">
         <div class="search" id="search">
-            <input type="search" id="search-input" placeholder="Search songs...">
+            <input type="text" id="search-input" onkeyup="handleSearch(this.id)" placeholder="Search songs...">
         </div>
         <!-- <div class="playlist-item">
             <div class="song">
@@ -101,6 +101,7 @@
     <!-- own js -->
     <script src="js/songs.js"></script>
     <script src="js/script.js"></script>
+   
 </body>
 
 </html>

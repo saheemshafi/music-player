@@ -484,11 +484,11 @@ header .dots:hover {
 .search #search-input {
 
     background: transparent;
-    border: 1px solid var(--secondary-color);
+    border:none;
+    border-bottom: 1px solid var(--secondary-color);
     outline: none;
     color: #fff;
     padding: .5rem .8rem;
-    border-radius: .5rem;
     width: 100%;
     letter-spacing: 1px;
 

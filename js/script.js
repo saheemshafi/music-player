@@ -17,9 +17,6 @@ let volumeBar = document.getElementById('volume-range');
 let volumeStyle = document.querySelector('.volume-style');
 let volumeDot = document.querySelector('.volume-dot');
 
-
-
-
 let index = 0;
 let audio = new Audio();
 
@@ -58,7 +55,7 @@ const masterPlay = function () {
         }
 
     });
-    
+
 
 
 }();
@@ -255,14 +252,14 @@ playlistBtn.onclick = () => {
     playlistClose.classList.add('open');
 };
 
-playlistClose.onclick = ()=>{
+playlistClose.onclick = () => {
 
     playlist.classList.remove('open');
     playlistClose.classList.remove('open');
 
 
 }
-songs.forEach((element,index) => {
+songs.forEach((element, index) => {
 
     playlist.innerHTML += `
                          <div class="playlist-item">
@@ -277,6 +274,7 @@ songs.forEach((element,index) => {
                              </div>
                          </div>
                          `;
+
 
 });
 
@@ -296,12 +294,9 @@ Array.from(playlistItems).forEach((element, i) => {
 
 });
 
+// search
+function handleSearch(id) {
 
 
-
-
-
-
-
-
+}
 
