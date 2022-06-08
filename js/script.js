@@ -292,7 +292,6 @@ Array.from(playlistItems).forEach((element, i) => {
         playPauseBtn.classList.remove('bx-play');
         playPauseBtn.classList.add('bx-pause');
         element.classList.add('active');
-
     })
 
 });

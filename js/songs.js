@@ -124,5 +124,29 @@ let songs = [
         artist: "Alok feat. John Martin",
         songSource: "Alok feat. John Martin - Wherever You Go",
         songPoster: "wherever you go"
+    },
+    {
+        songName: "Royalty",
+        artist: "Egzod & Maestro Chives",
+        songSource: "Egzod & Maestro Chives - Royalty",
+        songPoster: "royalty"
+    },
+    {
+        songName: "Changes",
+        artist: "XXXTENTACION",
+        songSource: "XXXTENTACION - changes",
+        songPoster: "Changes"
+    },
+    {
+        songName: "Hope",
+        artist: "XXXTENTACION",
+        songSource: "Hope",
+        songPoster: "Hope"
+    },
+    {
+        songName: "SAD!",
+        artist: "XXXTENTACION",
+        songSource: "XXXTENTACION - SAD!",
+        songPoster: "Sad"
     }
 ];
