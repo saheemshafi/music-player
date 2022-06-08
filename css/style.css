@@ -369,20 +369,8 @@ header .dots:hover {
 
 .offcanvas-playlists .active {
 
-    background-color: var(--primary-color) !important;
     color: var(--white-color) !important;
-
-}
-
-.active i {
-
-    color: var(--white-color) !important;
-
-}
-
-.active .song-info p {
-
-    color: var(--gradient-mix-yellow) !important;
+    background-color: rgb(14, 13, 13);
 
 }
 
