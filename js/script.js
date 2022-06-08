@@ -259,6 +259,7 @@ playlistClose.onclick = () => {
 
 
 }
+
 songs.forEach((element, index) => {
 
     playlist.innerHTML += `
@@ -275,8 +276,8 @@ songs.forEach((element, index) => {
                          </div>
                          `;
 
-
 });
+
 
 let playlistItems = document.querySelectorAll('.playlist-item');
 Array.from(playlistItems).forEach((element, i) => {
@@ -297,6 +298,19 @@ Array.from(playlistItems).forEach((element, i) => {
 // search
 function handleSearch(id) {
 
+    let controlValue = document.getElementById(id).value.toLowerCase();
+    let playlistItem = document.getElementsByClassName('playlist-item');
+    Array.from(playlistItem).forEach((e) => {
 
-}
+        let songName = e.getElementsByTagName('h3')[0].innerText.toLowerCase();
+
+        if (songName.includes(controlValue))
+            e.style.display = 'block';
+        else
+            e.style.display = 'none';
+
+    });
+
+};
+
 
