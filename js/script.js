@@ -270,7 +270,7 @@ songs.forEach((element, index) => {
                                     <p title="${songs[index].artist}" id="artist-name">${songs[index].artist}</p>
                                 </div>
                                  <div class="song-cta">
-                                    <i id="favourites" class='bx bx-play'></i>
+                                 <a download href="music/${songs[index].songSource}.mp3"><i id="favourites" class='bx bxs-download'></i></a>
                                  </div>
                              </div>
                          </div>
